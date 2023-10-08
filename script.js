@@ -55,7 +55,7 @@ function addval() {
             loadimage.classList.add("blureffect");
           }
           newdiv.querySelector('#download').addEventListener("click", () => {
-            const imgSrc = newdiv.querySelector("img").src;
+            const imgSrc = loadimage.src;
             // Create a temporary anchor element
             const a = document.createElement("a");
             a.href = imgSrc;
@@ -64,7 +64,7 @@ function addval() {
             a.click();
           })
           newdiv.querySelector('#share').addEventListener("click", () => {
-            imagesrc = newdiv.querySelector("img").src;
+            imagesrc = loadimage.src;
             console.log(imagesrc);
             shareicondiv.style.display = "flex";
           })
@@ -117,7 +117,7 @@ button.addEventListener("click", () => {
     }
     //for download button
     newdiv.querySelector('#download').addEventListener("click", () => {
-      const imgSrc = newdiv.querySelector("img").src;
+      const imgSrc = loadimage.src;
       // Create a temporary anchor element
       const a = document.createElement("a");
       a.href = imgSrc;
@@ -127,8 +127,7 @@ button.addEventListener("click", () => {
       a.click();
     })
     newdiv.querySelector('#share').addEventListener("click", () => {
-      imagesrc = newdiv.querySelector("img").src;
-      console.log(imagesrc);
+      imagesrc = loadimage.src;
       shareicondiv.style.display = "flex";
     })
     cont.appendChild(newdiv);
