@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+html,body{
+  height: 100%;
+  width: 100%;
+}
+:root{
+  --yellow:#FFCA03;
+}
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: var(--yellow); /* Color of the scrollbar handle */
+  border-radius: 6px; /* Rounded corners for the handle */
+}
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition-duration: .2s;
+}
+body{
+  background-color: black;
+}
+header{
+  width: 100%;
+  padding:20px;
+  color: white;
+  background-color:var(--yellow);
+  letter-spacing: 2px;
+}
+#main{
+  display:flex;
+  flex-direction: column;
+  padding: 30px 10%;
+  gap:20px;
+  align-items: center;
+}
+#inputcontainer{
+  display: flex;
+  align-items: center; 
+}
+#inputcontainer input{
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 3px 3px 5px rgba(255,255,255,.5);
+  width: 500px;
+}
+#inputcontainer input:focus{
+  outline: none;
+}
+#inputcontainer i{
+  color: white;
+  margin-left: 10px;
+  font-size: 20px;
+  cursor:pointer;
+}
+#resultcontainer {
+  width:100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid with three columns per row */
+    gap: 10px; /* Adjust the gap as needed */
+}
+#resultcontainer .resultdiv{
+  width:300px;
+  overflow:hidden;
+  position:relative;
+  height:300px;
+  border:1px solid var(--yellow);
+  border-radius: 10px;
+}
+#resultcontainer .resultdiv img{
+  width: 100%;
+  height:100%;
+}
+#resultcontainer .resultdiv:hover .blureffect{
+  transform:scale(1.3);
+  filter: blur(2px);
+}
+#resultcontainer .resultdiv:hover .icons i{
+  display: block; 
+}
+.icons i{
+  padding:20px;
+  font-size:20px;
+  color:white;
+  display:none;
+  cursor:pointer;
+  border-radius: 50%;
+  background-color: var(--yellow);
+}
+.icons{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 50%;
+  display: flex;
+  z-index: 20;
+  align-items: center;
+  display:none;
+  justify-content: space-around;
+  transform: translate(-50%, -50%);
+}
+
+button{
+  padding:7px;
+  font-size:20px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--yellow);
+  font-weight: bold;
+  color:white;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(255,255,255,.7);
+  display:none;
+}
+#shareimg{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255,255,255,.5);
+  z-index: 200;
+  transition: .2s all linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+}
+#guide{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+#guide h1{
+  text-shadow: 2px 2px 10px rgba(255, 255,255,.5);
+  font-size: 40px;
+  color: var(--yellow);
+}
+#guide video{
+  width: 700px;
+  border-radius: 10px;
+  border:1px solid white;
+}
+#shareimg div{
+  width: 250px;
+  height: 150px;
+  background-color: #0f0f0f;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#shareimg div a{
+  font-size: 60px;
+  text-decoration: none;
+  color: var(--yellow);
+}
+#shareimg i{
+  font-size: 40px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-weight: normal;
+  cursor: pointer;
+  color: black;
+}
+.icons .like{
+  color:red;
+}
+
+/*media query*/
+
+@media(max-width:550px){
+#inputcontainer input{
+  width:300px;
+}
+header h1{
+  font-size:20px;
+  text-align:center;
+}
+#resultcontainer .resultdiv{
+  width:100%;
+  height:200px;
+}
+#guide video{
+  width: 380px;
+}
+#guide h1{
+  font-size: 30px;
+}
+
+  
+}
+
+
